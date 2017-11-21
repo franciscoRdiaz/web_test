@@ -18,6 +18,7 @@
 package com.fullteaching.backend.e2e;
 
 import static java.lang.invoke.MethodHandles.lookup;
+import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
 import static org.slf4j.LoggerFactory.getLogger;
 
 import org.junit.jupiter.api.AfterEach;
@@ -25,6 +26,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
@@ -43,8 +45,9 @@ import io.github.bonigarcia.wdm.FirefoxDriverManager;
 @Tag("e2e")
 @DisplayName("E2E tests for OpenVidu TestApp")
 @ExtendWith(SeleniumExtension.class)
+@TestInstance(PER_CLASS)
 @RunWith(JUnitPlatform.class)
-public class FullTeachingTestE2E {
+public class FullTeachingTest {
 
 	static String APP_URL = "https://localhost:5000/";
 	static Exception ex = null;
@@ -99,7 +102,7 @@ public class FullTeachingTestE2E {
 
 	@Test
 	@DisplayName("Test video session")
-	void oneToOneVideoAudioSessionChrome() throws Exception {
+	public void oneToOneVideoAudioSessionChrome() throws Exception {
 
 		String brow = System.getenv("browser");
 		
