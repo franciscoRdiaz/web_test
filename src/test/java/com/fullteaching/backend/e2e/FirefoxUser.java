@@ -43,7 +43,7 @@ public class FirefoxUser extends BrowserUser {
 
 		capabilities.setCapability(FirefoxDriver.PROFILE, profile);
 		*/
-		String eusApiURL = System.getenv("ET_EUS_API");
+		String eusApiURL = System.getenv("ET_PUBLIC_API");
 		
 		if(eusApiURL == null) {
 			//this.driver = new FirefoxDriver(capabilities);
