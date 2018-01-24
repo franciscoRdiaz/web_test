@@ -38,7 +38,7 @@ public class ChromeUser extends BrowserUser {
 		// This flag selects the entire screen as video source when screen sharing
 		options.addArguments("--auto-select-desktop-capture-source=Entire screen");
 
-		String eusApiURL = System.getenv("ET_PUBLIC_API");
+		String eusApiURL = System.getenv("ET_PUBLIC_EUS_API");
 		
 		if(eusApiURL == null) {
 			this.driver = new ChromeDriver(options);	
