@@ -60,13 +60,13 @@ public class FullTeachingTest {
 	static void setupAll() {
 		
 		String selenium;
-		if(System.getenv("ET_PUBLIC_EUS_API") == null) {
+		if(System.getenv("ET_EUS_API") == null) {
 			//Outside ElasTest
 			ChromeDriverManager.getInstance().setup();
 			FirefoxDriverManager.getInstance().setup();	
 			selenium = "LOCAL";
 		} else {
-			selenium = System.getenv("ET_PUBLIC_EUS_API");
+			selenium = System.getenv("ET_EUS_API");
 			log.info("ET_PUBLIC_API: {}", selenium);
 		}
 		
