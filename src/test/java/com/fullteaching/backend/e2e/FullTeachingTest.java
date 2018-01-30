@@ -67,7 +67,7 @@ public class FullTeachingTest {
 			selenium = "LOCAL";
 		} else {
 			selenium = System.getenv("ET_EUS_API");
-			log.info("ET_PUBLIC_API: {}", selenium);
+			log.info("ET_EUS_API: {}", selenium);
 		}
 		
 		log.info("Using {} Selenium Driver", selenium);
