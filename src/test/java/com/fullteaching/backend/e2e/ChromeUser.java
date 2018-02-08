@@ -47,7 +47,7 @@ public class ChromeUser extends BrowserUser {
 			try {
 				DesiredCapabilities caps = new DesiredCapabilities();
 		        caps.setBrowserName("chrome");
-		        //caps.setVersion("61");
+		        caps.setVersion("61.0");
 		        caps.setCapability(ChromeOptions.CAPABILITY, options);				
 				
 		        this.driver = new RemoteWebDriver(new URL(eusApiURL),  caps);
