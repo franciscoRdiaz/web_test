@@ -113,9 +113,7 @@ public class FullTeachingTest {
 			setupBrowser("chrome");
 		}
 
-		log.info("Test video session");
-		
-		Thread.sleep(25000);
+		log.info("Test video session");		
 		
 	}
 
