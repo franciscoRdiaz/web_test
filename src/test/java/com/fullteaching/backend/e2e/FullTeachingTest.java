@@ -114,7 +114,7 @@ public class FullTeachingTest {
 		}
 
 		log.info("Test video session");	
-		Thread.sleep(250000);
+		Thread.sleep(2500);
 		
 	}
 
